@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <!-- Launch the gmapping node -->
+    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+        <!-- Remap topics if needed, e.g., to match your robot's sensor topics -->
+        <remap from="scan" to="base_scan"/>
+    </node>
+
+    <!-- Launch RViz for visualization -->
+    <node pkg="rviz" type="rviz" name="rviz" output="screen">
+        <param name="config" value="$(find stage_tutorial)/config/gmapping.rviz"/>
+    </node>
+
+</launch>

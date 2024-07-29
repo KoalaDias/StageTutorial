@@ -1,0 +1,14 @@
+# Ignore build and devel directories
+build/
+devel/
+# Ignore compiled files
+*.log
+*.o
+*.a
+*.so
+# Ignore other common unnecessary files
+.DS_Store
+.vscode/
+*.swp
+*.pyc
+__pycache__/
